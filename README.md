@@ -1,1 +1,1 @@
-# osu-premium202109
+# osu-premium
