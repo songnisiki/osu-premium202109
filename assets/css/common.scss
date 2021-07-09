@@ -1,0 +1,622 @@
+@charset "utf-8";
+
+@import url("base.css");
+
+/***************************************************************************
+ *
+ * COMMON STYLE
+ *
+ ***************************************************************************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.hira {
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.gothic {
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+.mincho {
+    font-family: "游明朝体", "YuMincho", "游明朝", "Yu Mincho", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN W3", HiraMinProN-W3, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "HGS明朝E", "ＭＳ Ｐ明朝", "MS PMincho", serif;
+}
+
+.roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #000;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #fff;
+    font-family: "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+
+    &.fixed {
+        overflow: hidden;
+    }
+}
+
+a {
+    color: #fff;
+}
+
+
+.inner {
+    width: 1280px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/*VALIDATE CONTACT*/
+.error {
+    display: block;
+    font-size: 12px;
+    color: red;
+}
+
+/* HEADER */
+#header {
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+
+    .header-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo {
+            padding-left: 11px;
+            padding-top: 6px;
+        }
+
+        .main-menu {
+            display: flex;
+
+            .menu {
+                display: flex;
+                align-items: center;
+                padding: 8px 0;
+                margin-right: 53px;
+
+                li {
+                    border-right: 1px solid #4D4D4D;
+
+                    &:last-child {
+                        border-right: none;
+                    }
+
+                    a {
+                        display: block;
+                        text-align: center;
+                        padding: 18px 0 19px;
+                        width: 150px;
+
+                        strong {
+                            display: block;
+                            font-size: 20px;
+                        }
+
+                        small {
+                            display: block;
+                            font-size: 12px;
+                            margin-top: 2px;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hamburger{
+            display: none;
+        }
+    }
+}
+
+/* CONTENT */
+#content {
+    width: 100%;
+}
+
+/* FOOTER */
+#footer {
+    width: 100%;
+
+    .logo {
+        text-align: center;
+    }
+
+    .menu-footer {
+        margin-top: 88px;
+
+        .menu {
+            display: flex;
+            justify-content: center;
+
+            li {
+                border-right: 1px solid #4D4D4D;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                a {
+                    display: block;
+                    text-align: center;
+                    padding: 20px 52px 16px;
+
+                    .title {
+                        font-size: 20px;
+                    }
+
+                    .text {
+                        font-size: 12px;
+                        margin-top: 1px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#copyright {
+    text-align: center;
+    padding: 75px 0 59px;
+}
+
+.sp {
+    display: none;
+}
+
+.area {
+    .area-title {
+        text-align: center;
+
+        span {
+            display: block;
+            font-size: 24px;
+            margin-top: 27px;
+        }
+    }
+
+    .anchor-place {
+        display: flex;
+        align-items: center;
+
+        .number {
+            font-size: 61px;
+            font-weight: normal;
+            line-height: 1;
+            color: #e0d7c0;
+            margin-right: 25px;
+            transform: translateY(-3px);
+        }
+
+        .text {
+            font-size: 42px;
+            position: relative;
+            padding-left: 50px;
+            line-height: 1.7;
+
+            &:before {
+                content: "";
+                height: 100%;
+                background: #E0D7C0;
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 4px;
+                height: 108px;
+            }
+        }
+    }
+
+    .center-ttl {
+        font-size: 32px;
+        font-weight: normal;
+        color: #e0d7c0;
+        text-align: center;
+        margin-top: 49px;
+        position: relative;
+        margin-bottom: 46px;
+
+        &:before,
+        &:after {
+            content: "";
+            display: inline-block;
+            vertical-align: 10px;
+            background: #E0D7C0;
+            width: 92px;
+            height: 1px;
+        }
+
+        &:before {
+            margin-right: 27.5px;
+        }
+
+        &:after {
+            margin-left: 27.5px;
+        }
+
+        small {
+            font-size: 18px;
+        }
+    }
+
+    .list-cast {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 57px;
+
+        li {
+            text-align: center;
+            margin-right: 50px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .cast-photo {
+                width: 198px;
+                height: 255px;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+
+            .cast-name {
+                font-size: 18px;
+                font-weight: bold;
+                margin-top: 27px;
+                small {
+                    display: block;
+                    font-size: .9em;
+                    font-weight: normal;
+                    color: #ccc;
+                }
+            }
+        }
+    }
+
+    .woffset {
+        margin: 0 auto;
+        justify-content: flex-start;
+    }
+
+    .note {
+        font-size: 16px;
+        line-height: 1.75;
+        padding: 0 45px;
+    }
+}
+
+/* FIX TABLET */
+@media (max-width: 1230px) and (min-width: 769px) {
+    body {
+        width: 1349px;
+    }
+}
+
+/* PC ONLY */
+@media (min-width: 769px) {
+    #header.scrollX {
+        width: 1349px;
+    }
+
+    #header {
+        .header-bar {
+            .main-menu {
+                .menu {
+                    li {
+                        a {
+                            position: relative;
+
+                            &:before,
+                            &:after {
+                                content: "";
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                background: rgba(255, 255, 255, 0.1);
+                                width: 100%;
+                                height: 0;
+                                transition: all 300ms linear;
+                            }
+
+                            &:before {
+                                top: 0;
+                                bottom: auto;
+                            }
+
+                            &:hover {
+
+                                &:before,
+                                &:after {
+                                    height: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .woffset {
+        width: 942px;
+    }
+
+    #footer {
+        .menu-footer {
+            transform: translateX(-25px);
+        }
+    }
+}
+
+/* STYLE MOBILE */
+@media (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+
+    .sp {
+        display: block;
+    }
+
+    .inner {
+        width: 100%;
+        padding: 0 4%;
+    }
+
+    .area{
+    	.list-cast{
+    		display: none;
+    	}
+    	.wrapper-sp{
+    		width: 104%;
+    		margin-right: -4%;
+    		.swiper-container{
+	    		margin-bottom: 15px;
+    			.swiper-wrapper{
+                    height: 436px;
+    				.swiper-slide{
+						width: 132px;
+                        margin-right: 27px;
+                        margin-bottom: 15px;
+                        height: 203px;
+    					.cast-photo{
+    						width: 100%;
+                            height: 170px;
+                            overflow: hidden;
+                            img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: top;
+                            }
+    					}
+    					.cast-name{
+    						font-size: 12px;
+    						text-align: center;
+    						margin-top: 10px;
+                            small {
+                                display: block;
+                                font-size: .9em;
+                                color: #ccc;
+                            }
+                        }
+    				}
+    			}
+    		}
+    	}
+    	.area-title{
+    		font-weight: normal;
+    		img{
+    			margin: 0 auto;
+    		}
+    		span{
+    			font-size: 14px;
+    			margin-top: 11px;
+    		}
+    	}
+    	.anchor-place{
+    		.number{
+    			font-size: 36px;
+    			margin-right: 19px;
+    		}
+    		.text{
+    			font-size: 20px;
+    			padding-left: 20px;
+    			&:before{
+    				width: 3px;
+    				height: 89px;
+    			}
+    		}
+    	}
+    	.center-ttl{
+    		font-size: 17px;
+            margin-top: 35px;
+            margin-bottom: 30px;
+    		&:before,
+    		&:after{
+    			width: 100%;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+    		}
+    		&:before{
+    			margin-right: 0;
+    		}
+    		&:after{
+    			display: none;
+    		}
+            span{
+                background: #000;
+                position: relative;
+                padding: 0 12px;
+            }
+    		small{
+    			font-size: 12px;
+                vertical-align: 3px;
+    		}
+    	}
+    	.note{
+    		font-size: 12px;
+    		padding: 0;
+    		line-height: 1.9;
+    		margin-top: 47px;
+    	}
+    }
+
+    // #header
+    #header {
+        .header-bar {
+        	padding: 10px 0;
+        	.logo{
+        		width: 120px;
+        		padding: 0;
+        	}
+
+            .hamburger {
+            	width: 45px;
+            	height: 45px;
+            	display: flex;
+            	align-items: center;
+            	justify-content: center;
+            	flex-direction: column;
+            	transform: translateX(10px);
+                span {
+                	display: block;
+                    width: 23px;
+                    height: 4px;
+                    background: #fff;
+                    margin-bottom: 6px;
+                    transition: all 300ms linear;
+
+                    &:nth-child(3) {
+                    	margin-bottom: 0;
+                    }
+                }
+                &.toggle{
+                	span{
+                		&:nth-child(1){
+                			transform: rotate(45deg) translate(7px, 7px);
+                		}
+                		&:nth-child(2){
+                			opacity: 0;
+                		}
+                		&:nth-child(3){
+                			transform: rotate(-45deg) translate(7px, -7px);
+                		}
+                	}
+                }
+            }
+
+            .main-menu{
+            	position: fixed;
+            	top: 65px;
+            	left: 0;
+            	right: 0;
+            	background: rgba(0, 0, 0, 0.85);
+            	display: none;
+            	height: calc(100vh - 65px);
+            	overflow-y: auto;
+            	.menu{
+	            	display: block;
+	            	margin-right: 0;
+	            	padding: 30px 0;
+            		li{
+            			border-right: none;
+            			position: relative;
+            			margin-bottom: 5px;
+            			&:last-child{
+            				margin-bottom: 0;
+        					&:after{
+        						display: none;
+        					}
+            			}
+            			&:after{
+            				content: "";
+            				position: absolute;
+            				bottom: 0;
+            				left: 50%;
+            				transform: translateX(-50%);
+            				height: 1px;
+            				width: 45px;
+            				background: #fff;
+            			}
+            			a{
+            				width: 100%;
+            				padding: 18px 0 22px;
+            			}
+            		}
+            	}
+            	.btn-cta{
+            		margin-top: 24px;
+            		margin-bottom: 89px;
+            		a{
+            			img{
+	            			margin: 0 auto;
+            			}
+            		}
+            	}
+            }
+        }
+    }
+
+    // #footer
+    #footer {
+    	.logo{
+    		margin-top: 25px;
+    		img{
+    			width: 261px;
+    			margin: 0 auto;
+    		}
+    	}
+        .menu-footer {
+        	margin-top: 54px;
+            .menu {
+                display: block;
+                padding: 0 42px;
+                li{
+                	border-right: none;
+                	border-bottom: 1px solid #4D4D4D;
+                	&:last-child{
+                		border-bottom: none;
+                	}
+                	a{
+                		padding: 18px 40px;
+                	}
+                }
+            }
+        }
+    }
+    #copyright{
+    	font-size: 12px;
+    	padding: 25px 0 85px;
+    	margin-top: 56px;
+    }
+}
+
+/*IE FIX*/
+@media all and (-ms-high-contrast:none) {}
+
+.MacOS{
+    font-family: YuGothic, "游ゴシック体", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
+
+.MacOS .hira{
+    font-family: YuGothic, "游ゴシック体", "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", "メイリオ", sans-serif;
+}
